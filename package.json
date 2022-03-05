@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/index.ts",
+    "build": "tsc",
     "dev": "ts-node-dev --poll --exit-child --transpile-only ./src/index.ts",
     "format": "prettier --write '**/*.{ts,js,json,md}'",
     "lint": "tsc && eslint . && prettier --check '**/*.{ts,js,json,md}'",
