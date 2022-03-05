@@ -9,7 +9,7 @@
     "dev": "ts-node-dev --poll --exit-child --transpile-only ./src/index.ts",
     "format": "prettier --write '**/*.{ts,js,json,md}'",
     "lint": "tsc && eslint . && prettier --check '**/*.{ts,js,json,md}'",
-    "deploy-commands": "ts-node src/commands/deploy.ts"
+    "deploy-commands": "ts-node src/scripts/deploy.ts"
   },
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
