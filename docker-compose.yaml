@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  ultiservant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    env_file: .env
+    command: yarn start
