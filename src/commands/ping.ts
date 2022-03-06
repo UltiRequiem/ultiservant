@@ -1,8 +1,8 @@
 import { MessageEmbed } from "discord.js";
 
-import type { CommandInteraction } from "discord.js";
+import type { command } from ".";
 
-export async function ping(interaction: CommandInteraction) {
+export const ping: command = async (interaction) => {
   const embed = new MessageEmbed()
     .setColor("#00ffff")
     .setTitle(`Pong 🏓`)
@@ -12,4 +12,4 @@ export async function ping(interaction: CommandInteraction) {
     .setTimestamp();
 
   interaction.reply({ embeds: [embed] });
-}
+};

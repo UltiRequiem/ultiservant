@@ -11,6 +11,9 @@ const commands = [
   new SlashCommandBuilder()
     .setName("rules")
     .setDescription("Replies with the rules!"),
+  new SlashCommandBuilder()
+    .setName("info")
+    .setDescription("Replies with bot and server info!"),
 ].map((command) => command.toJSON());
 
 const rest = new REST({ version: "9" }).setToken(TOKEN);

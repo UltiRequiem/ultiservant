@@ -1,5 +1,5 @@
 export const rules = `
-lease read the following rules prior to interacting in the server.
+Please read the following rules prior to interacting in the server.
     
     • Keep all messages and content SFW
     • Harassment and Hate Speech is prohibited
