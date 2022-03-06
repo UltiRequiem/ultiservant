@@ -1,18 +1,13 @@
-import { SlashCommandBuilder } from '@discordjs/builders';
-import { Discord } from 'discord.js';
+import { MessageEmbed } from "discord.js";
+import type { CommandInteraction } from "discord.js";
 
-module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('ping')
-        .setDescription('Pong!'),
-    async execute(interaction) {
-        const embed = new Discord.MessageEmbed()
-            .setColor('#00ffff')
-            .setTimestamp()
-            .setTitle(`Pong 🏓`)
-            .addField('Latancy:', `${(interaction.client.ws.ping).toFixed(0)} ms`, true)
-            .addField('API Latancy:', `${Date.now() - interaction.createdTimestamp}ms`)
-            .setFooter(`counted for ${interaction.user.username}`)
-        interaction.reply({ embeds: [embed] })
-    }
+export async function getPing(interaction: CommandInteraction) {
+  const embed = new MessageEmbed()
+    .setColor("#00ffff")
+    .setTimestamp()
+    .setTitle(`Pong 🏓`)
+    .addField("Latency:", `${interaction.client.ws.ping.toFixed(0)} ms`, true)
+    .addField("API Latency:", `${Date.now() - interaction.createdTimestamp}ms`)
+    .setFooter({ text: `counted for ${interaction.user.username}` });
+  interaction.reply({ embeds: [embed] });
 }
