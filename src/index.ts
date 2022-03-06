@@ -16,7 +16,7 @@ client.on("interactionCreate", async (interaction) => {
   const { commandName } = interaction;
 
   if (commandName === "ping") {
-    await interaction.reply("Pong!");
+    await interaction.reply(`Bot's latancy is ${(interaction.client.ws.ping).toFixed(0)} ms`);
   } else if (commandName === "server") {
     await interaction.reply("Server info.");
   } else if (commandName === "user") {
