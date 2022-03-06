@@ -1,4 +1,4 @@
-# The official UltiRequiem's Universe Server
+# The official UltiUniverse Bot
 
 **join the community**
 
