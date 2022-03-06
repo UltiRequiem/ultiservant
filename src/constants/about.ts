@@ -1,6 +1,4 @@
 export const RULES = `
-Please read the following rules prior to interacting in the server.
-    
     • Keep all messages and content SFW
     • Harassment and Hate Speech is prohibited
     • Do not share pirated/crack software and content
@@ -16,5 +14,5 @@ Please read the following rules prior to interacting in the server.
 export const THANK_YOU = `
   Thank you for joining! If you'd like to support the community, you can send out this permanent invite link to anyone that might find the server interesting
 
-   https://ultirequiem.com/discord
+  https://ultirequiem.com/discord
 `;

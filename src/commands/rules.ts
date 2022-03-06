@@ -5,9 +5,9 @@ import { CHANNELS, RULES, THANK_YOU, ULTIREQUIEM_ID } from "../constants";
 import type { command } from ".";
 
 export const rules: command = async (interaction) => {
-  if (interaction.channel.id !== CHANNELS.rules) {
+  if (interaction.channel.id !== CHANNELS.about) {
     await interaction.reply({
-      content: `Please go to <#${CHANNELS.rules}> to view the server rules.`,
+      content: `Please go to <#${CHANNELS.about}> to view the server rules.`,
     });
 
     return;

@@ -1,7 +1,7 @@
 import { Client, Intents } from "discord.js";
 import { TOKEN } from "./config";
 
-import { commands } from "./commands";
+import { commands } from "./commands/handler";
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 

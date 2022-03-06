@@ -14,6 +14,9 @@ const commands = [
   new SlashCommandBuilder()
     .setName("info")
     .setDescription("Replies with bot and server info!"),
+  new SlashCommandBuilder()
+    .setName("invite")
+    .setDescription("Replies with an invite link!"),
 ].map((command) => command.toJSON());
 
 const rest = new REST({ version: "9" }).setToken(TOKEN);
