@@ -4,7 +4,7 @@ function pad(s: number) {
   return (s < 10 ? "0" : "") + s;
 }
 
-function format(seconds: number) {
+export function format(seconds: number) {
   const hours = Math.floor(seconds / (60 * 60));
   const minutes = Math.floor((seconds % (60 * 60)) / 60);
   const parsedSeconds = Math.floor(seconds % 60);
@@ -29,14 +29,16 @@ export function timeCon(time: number) {
   seconds = Math.floor(time / 1000);
   time -= seconds * 1000;
 
- const days2 = `${ days > 9 ? days : "" + days}`;
- const hours2 =`${ hours > 9 ? hours : "" + hours}`;
- const minutes2 = `${minutes > 9 ? minutes : "" + minutes}`
+  const days2 = `${days > 9 ? days : "" + days}`;
+  const hours2 = `${hours > 9 ? hours : "" + hours}`;
+  const minutes2 = `${minutes > 9 ? minutes : "" + minutes}`;
   const seconds2 = `${seconds > 9 ? seconds : "" + seconds}`;
 
   return (
     (parseInt(days2) > 0 ? days + " days " : " ") +
-    (parseInt(hours2) === 0 && parseInt(days2) === 0 ? "" : hours2 + " hours ") +
+    (parseInt(hours2) === 0 && parseInt(days2) === 0
+      ? ""
+      : hours2 + " hours ") +
     minutes2 +
     " minutes " +
     seconds2 +

@@ -1,18 +1,13 @@
 import { MessageActionRow, MessageButton, MessageEmbed } from "discord.js";
 
-import {
-  channels,
-  rules as rulesMessage,
-  thankYou,
-  ULTIREQUIEM_ID,
-} from "../constants";
+import { CHANNELS, RULES, THANK_YOU, ULTIREQUIEM_ID } from "../constants";
 
 import type { command } from ".";
 
 export const rules: command = async (interaction) => {
-  if (interaction.channel.id !== channels.rules) {
+  if (interaction.channel.id !== CHANNELS.rules) {
     await interaction.reply({
-      content: `Please go to <#${channels.rules}> to view the server rules.`,
+      content: `Please go to <#${CHANNELS.rules}> to view the server rules.`,
     });
 
     return;
@@ -26,12 +21,12 @@ export const rules: command = async (interaction) => {
   const rulesEmbed = new MessageEmbed()
     .setColor("#40B9FD")
     .setTitle("Our Community Rules")
-    .setDescription(rulesMessage);
+    .setDescription(RULES);
 
   const infoEmbed = new MessageEmbed()
     .setColor("#C930FF")
     .setTitle("Thanks for joining!")
-    .setDescription(thankYou);
+    .setDescription(THANK_YOU);
 
   const socialRow = new MessageActionRow().addComponents(
     new MessageButton()
