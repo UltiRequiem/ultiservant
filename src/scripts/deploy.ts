@@ -9,11 +9,8 @@ const commands = [
     .setName("ping")
     .setDescription("Replies with pong!"),
   new SlashCommandBuilder()
-    .setName("server")
-    .setDescription("Replies with server info!"),
-  new SlashCommandBuilder()
-    .setName("user")
-    .setDescription("Replies with user info!"),
+    .setName("rules")
+    .setDescription("Replies with the rules!"),
 ].map((command) => command.toJSON());
 
 const rest = new REST({ version: "9" }).setToken(TOKEN);

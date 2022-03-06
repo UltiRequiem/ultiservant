@@ -6,9 +6,7 @@ import { commands } from "./commands";
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.once("ready", () => {
-  console.log("Ready!");
-
-  console.log(client.user?.id);
+  console.log(`Bot Running!`);
 });
 
 client.on("interactionCreate", async (interaction) => {
