@@ -18,7 +18,7 @@ const client = new Client({
 });
 
 //command handeler
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.ts'))
 const commands = []
 client.commands = new Collection()
 for (const file of commandFiles) {
