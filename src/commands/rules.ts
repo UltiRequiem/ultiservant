@@ -2,7 +2,7 @@ import { MessageEmbed } from "discord.js";
 
 import type { CommandInteraction } from "discord.js";
 
-export async function ping(interaction: CommandInteraction) {
+export async function rules(interaction: CommandInteraction) {
   const embed = new MessageEmbed()
     .setColor("#00ffff")
     .setTitle(`Pong 🏓`)

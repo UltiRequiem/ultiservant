@@ -1,9 +1,8 @@
-import { CommandInteraction } from "discord.js";
+import { ping } from "./ping";
 
-import { getPing } from "./ping";
+import type { CommandInteraction } from "discord.js";
 
 export type command = (interaction: CommandInteraction) => Promise<void>;
+export type commandHandler = { [key: string]: command };
 
-export const commands: { [key: string]: command } = {
-  ping: getPing,
-};
+export const commands: commandHandler = { ping };
