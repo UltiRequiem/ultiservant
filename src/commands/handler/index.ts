@@ -1,4 +1,4 @@
-import { ping, rules, info } from "..";
+import { info, ping, rules } from "..";
 
 import type { command } from "..";
 

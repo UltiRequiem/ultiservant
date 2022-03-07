@@ -8,12 +8,13 @@ https://ultirequiem.com/discord
 
 ### Commands Handler
 
-People are doing very strange things to handle the commands, Here is a much simpler approach than the ones in [the documentation](https://discordjs.guide/creating-your-bot/command-handling.html#reading-command-files).
+People are doing very strange things to handle the commands, here is a simpler
+way 👇
 
 ```ts
 import type { CommandInteraction } from "discord.js";
 
-import { ping, rules, info } from "./myCommands";
+import { info, ping, rules } from "./myCommands";
 
 export type command = (interaction: CommandInteraction) => Promise<void>;
 export type commandHandler = { [key: string]: command };
@@ -35,7 +36,8 @@ client.on("interactionCreate", async (interaction) => {
 
 Completely type-safe!
 
-> The example in the docs wouldn't work on TypeScript, and would be tricky to make it work using native ESM!
+> The example in the docs wouldn't work on TypeScript, and would be tricky to
+> make it work using native ESM!
 
 ## Licence
 
