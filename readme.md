@@ -4,7 +4,11 @@
 
 https://ultirequiem.com/discord
 
+This is the first Discord bot I'm doing, I ever done one using the now dead [discord.py](https://github.com/UltiRequiem/Zetta-Discord-Bot) while learning to code, so I'm just learning on the fly, feel free to make PR or Issues!
+
 ## Docs
+
+Things I learned while making this bot 📖
 
 ### Commands Handler
 
@@ -36,8 +40,8 @@ client.on("interactionCreate", async (interaction) => {
 
 Completely type-safe!
 
-> The example in the docs wouldn't work on TypeScript, and would be tricky to
-> make it work using native ESM!
+> The example in the [docs](https://discordjs.guide/creating-your-bot/command-handling.html#reading-command-files)
+> wouldn't work on TypeScript, and would be tricky to make it work using native ESM!
 
 ## Licence
 
